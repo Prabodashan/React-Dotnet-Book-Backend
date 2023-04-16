@@ -46,6 +46,14 @@ if (app.Environment.IsDevelopment())
     // AppDbInitializer.Seed(app);
 }
 
+app.UseCors(options =>
+{
+    options
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
